@@ -1,5 +1,6 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
+  session = require('express-session'),
   cookieParser = require('cookie-parser'),
   passport = require('passport'),
   LocalStrategy = require('passport-local').Strategy;
@@ -19,7 +20,7 @@ app.use("/client/", express.static(__dirname + '/client/'));
 
 //Initial File Serve
 app.get("/", function (req, res){
-  res.sendFile(__dirname + "/client/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 
