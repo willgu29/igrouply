@@ -7,8 +7,8 @@ export default class App extends Component {
   render() {
     return (
     	<div>
-    	<NavBar />
-      	<h1>Hello, world.</h1>
+    		<NavBar />
+    		{this.props.children}
       	</div>
     );
   }
